@@ -1,0 +1,9 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreTestTargets>Clean;Build</PreTestTargets>
+  <MsTestCommand>mstest /testcontainer:</MsTestCommand>
+  </PropertyGroup>
+  <Target Name="Test" DependsOnTargets="$(PreTestTargets)">
+    <Exec Command="$(MsTestCommand)&quot;$(OutputPath)\$(AssemblyName).dll&quot;" Timeout="30000"/>
+  </Target>
+</Project>

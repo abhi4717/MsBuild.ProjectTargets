@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsBuild", "MsBuild\MsBuild.csproj", "{5E3FA38D-FC54-4C5C-8DDE-A6EF564EC766}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsBuild.Tests", "MsBuild.Tests\MsBuild.Tests.csproj", "{B5266316-68E7-4655-98BF-D3CCF87AA429}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{D239B579-5437-461A-ACB3-766FD01BBF08}"
+	ProjectSection(SolutionItems) = preProject
+		build\Test.Targets = build\Test.Targets
+		build\WebProject.Targets = build\WebProject.Targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Dev|Any CPU = Dev|Any CPU
+		Int|Any CPU = Int|Any CPU
+		Prod|Any CPU = Prod|Any CPU
+		QA|Any CPU = QA|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E3FA38D-FC54-4C5C-8DDE-A6EF564EC766}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{5E3FA38D-FC54-4C5C-8DDE-A6EF564EC766}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{5E3FA38D-FC54-4C5C-8DDE-A6EF564EC766}.Dev|Any CPU.Deploy.0 = Dev|Any CPU
+		{5E3FA38D-FC54-4C5C-8DDE-A6EF564EC766}.Int|Any CPU.ActiveCfg = Int|Any CPU
+		{5E3FA38D-FC54-4C5C-8DDE-A6EF564EC766}.Int|Any CPU.Build.0 = Int|Any CPU
+		{5E3FA38D-FC54-4C5C-8DDE-A6EF564EC766}.Int|Any CPU.Deploy.0 = Int|Any CPU
+		{5E3FA38D-FC54-4C5C-8DDE-A6EF564EC766}.Prod|Any CPU.ActiveCfg = Prod|Any CPU
+		{5E3FA38D-FC54-4C5C-8DDE-A6EF564EC766}.Prod|Any CPU.Build.0 = Prod|Any CPU
+		{5E3FA38D-FC54-4C5C-8DDE-A6EF564EC766}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{5E3FA38D-FC54-4C5C-8DDE-A6EF564EC766}.QA|Any CPU.Build.0 = QA|Any CPU
+		{B5266316-68E7-4655-98BF-D3CCF87AA429}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{B5266316-68E7-4655-98BF-D3CCF87AA429}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{B5266316-68E7-4655-98BF-D3CCF87AA429}.Dev|Any CPU.Deploy.0 = Dev|Any CPU
+		{B5266316-68E7-4655-98BF-D3CCF87AA429}.Int|Any CPU.ActiveCfg = QA|Any CPU
+		{B5266316-68E7-4655-98BF-D3CCF87AA429}.Int|Any CPU.Deploy.0 = QA|Any CPU
+		{B5266316-68E7-4655-98BF-D3CCF87AA429}.Prod|Any CPU.ActiveCfg = Prod|Any CPU
+		{B5266316-68E7-4655-98BF-D3CCF87AA429}.Prod|Any CPU.Build.0 = Prod|Any CPU
+		{B5266316-68E7-4655-98BF-D3CCF87AA429}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{B5266316-68E7-4655-98BF-D3CCF87AA429}.QA|Any CPU.Build.0 = QA|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

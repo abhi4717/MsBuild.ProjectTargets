@@ -1,0 +1,21 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PrePublishTargets>Clean;Build</PrePublishTargets>
+
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration)==''">
+    <Configuration>Dev</Configuration>
+  </PropertyGroup>
+  <ItemGroup>
+    <TestProjects Include="UnitTestProject">
+      <ProjectPath>..\MsBuild.Tests\MsBuild.Tests.csproj</ProjectPath>
+      <ProjectName>MsBuild.Tests</ProjectName>
+      <TargetName>Test</TargetName>
+    </TestProjects>
+  </ItemGroup>
+  <Target Name="Publish" DependsOnTargets="$(PrePublishTargets)" >
+    <MSBuild Projects="%(TestProjects.ProjectPath)" Targets="%(TestProjects.TargetName)" StopOnFirstFailure="true"/>
+    <Message Text="Test run completed successfully" />
+    
+  </Target>
+</Project>
