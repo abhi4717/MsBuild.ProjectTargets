@@ -2,7 +2,6 @@
   <Import Project="C:\Program Files\MSBuild\ExtensionPack\4.0\MSBuild.ExtensionPack.VersionNumber.targets" />
   <PropertyGroup>
     <PrePublishTargets>Clean;Build</PrePublishTargets>
-
   </PropertyGroup>
   <PropertyGroup Condition="$(Configuration)==''">
     <Configuration>Dev</Configuration>
@@ -14,9 +13,17 @@
       <TargetName>Test</TargetName>
     </TestProjects>
   </ItemGroup>
-  <Target Name="Publish" DependsOnTargets="$(PrePublishTargets)" >
-    <MSBuild Projects="%(TestProjects.ProjectPath)" Targets="%(TestProjects.TargetName)" StopOnFirstFailure="true"/>
-    <Message Text="Test run completed successfully" />
+  
+  <Target Name="RunTests" DependsOnTargets="$(PrePublishTargets)">
+    <!--<Message Text="%(TestProjects.ProjectPath)" />-->
+    <MSBuild Projects="$(MSBuildProjectDirectory)\%(TestProjects.ProjectPath)" Targets="%(TestProjects.TargetName)" />
+  </Target>
+
+  <Target Name="Versioning" DependsOnTargets="RunTests">
+    
+  </Target>
+
+  <Target Name="MsDeployPackage" DependsOnTargets="Versioning">
     
   </Target>
 </Project>
